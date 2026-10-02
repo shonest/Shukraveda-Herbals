@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --header-h: 72px;
+  --strip-h: 32px;
+}
+
+/* Scale the whole rem-based UI on large screens */
+@media (min-width: 1440px) { html { font-size: 17px; } :root { --header-h: 80px; } }
+@media (min-width: 1800px) { html { font-size: 19px; } :root { --header-h: 88px; } }
+@media (min-width: 2400px) { html { font-size: 22px; } :root { --header-h: 96px; } }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #fff;
+  color: #18211b;
+  font-family: Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+h1,h2,h3,h4 {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+::selection {
+  background: #315a2d;
+  color: white;
+}
+
+.container-shell {
+  width: min(1560px, calc(100% - clamp(32px, 6vw, 160px)));
+  margin-inline: auto;
+}
+
+.section-pad {
+  padding-block: clamp(46px, 5.6vw, 77px);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid rgba(199, 162, 77, .55);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Desktop nav: gold wavy underline (same as section headings) draws in on hover */
+.nav-label { position: relative; display: inline-block; }
+.nav-label::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 8px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M1 6C25 1 75 1 99 6' fill='none' stroke='%23c7a24d' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat left / 100% 100%;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path .4s ease;
+}
+.nav-link:hover .nav-label::after,
+.nav-link:focus-visible .nav-label::after,
+.group:hover > .nav-link .nav-label::after,
+.group:focus-within > .nav-link .nav-label::after { clip-path: inset(0 0 0 0); }
