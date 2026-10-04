@@ -56,7 +56,7 @@ export default function StatsSection() {
             <LeafLogo className="h-5 w-5 text-gold" />Trusted by patients
           </p>
           <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">
-            Shukravedaherbals Consultation <span className="relative inline-block text-gold">Advantages<svg className="absolute -bottom-2 left-0 h-2 w-full text-gold" viewBox="0 0 100 8" preserveAspectRatio="none" aria-hidden="true"><path d="M1 6C25 1 75 1 99 6" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" /></svg></span>
+            Shukraveda Herbals Consultation <span className="relative inline-block text-gold">Advantages<svg className="absolute -bottom-2 left-0 h-2 w-full text-gold" viewBox="0 0 100 8" preserveAspectRatio="none" aria-hidden="true"><path d="M1 6C25 1 75 1 99 6" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" /></svg></span>
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-white/80 sm:text-base">Every day, patients speak with our Ayurvedic experts to uncover the root causes of their health concerns and receive tailored treatment at their doorstep.</p>
         </div>
