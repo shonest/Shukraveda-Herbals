@@ -6,6 +6,7 @@ const socials = [
   ['Instagram', InstagramIcon],
   ['YouTube', YoutubeIcon],
   ['LinkedIn', LinkedinIcon],
+  
 ];
 
 export default function Footer() {
