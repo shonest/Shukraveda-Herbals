@@ -9,15 +9,10 @@ import DiseaseCard from '@/components/DiseaseCard';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 import ScrollTop from '@/components/ScrollTop';
+import { getSettings, getConditions, getTestimonials } from '@/lib/content';
 
-const diseases = [
-  { id: 'kidney-disorder', type: 'kidney', title: 'Kidney Disorder', text: 'Personalized herbal and lifestyle support for kidney wellness.' },
-  { id: 'skin-disorder', type: 'skin', title: 'Skin Disorder', text: 'Holistic herbal care for healthier, clearer skin.' },
-  { id: 'sexual-disorder', type: 'sexual', title: 'Sexual Disorder', text: 'Private, respectful herbal guidance for sexual wellness.' },
-  { id: 'male-infertility', type: 'fertility', title: 'Male Infertility', text: 'Confidential herbal support for male fertility health.' }
-];
-
-export default function HomePage() {
+export default async function HomePage() {
+  const [settings, diseases, testimonials] = await Promise.all([getSettings(), getConditions(), getTestimonials()]);
   return (
     <>
       <Header />
@@ -64,19 +59,19 @@ export default function HomePage() {
 
         <StatsSection />
 
-        <Testimonials />
+        <Testimonials items={testimonials.filter(t => t.published)} />
 
         <section id="contact" className="section-pad bg-forest-50">
           <div className="container-shell grid items-start gap-10 lg:grid-cols-[.8fr_1.2fr]">
             <Reveal>
               <SectionHeading eyebrow="Contact us" title="Start with a private consultation" highlight="request" text="Tell us what you would like to discuss. We will use the information only to understand your request and connect you with the right consultation flow." />
-              <div className="mt-8 space-y-4 text-sm text-slate-700"><p><strong>Email:</strong> shukravedaherbals@gmail.com</p><p><strong>Phone:</strong> +91 93193 25065</p><p><strong>Address:</strong> Demo Address, New Delhi, India</p></div>
+              <div className="mt-8 space-y-4 text-sm text-slate-700"><p><strong>Email:</strong> {settings.email}</p><p><strong>Phone:</strong> {settings.phone}</p><p><strong>Address:</strong> {settings.address}</p></div>
             </Reveal>
-            <Reveal><ContactForm /></Reveal>
+            <Reveal><ContactForm diseases={diseases.map(d => d.title)} /></Reveal>
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer settings={settings} />
       <ScrollTop />
     </>
   );

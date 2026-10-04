@@ -8,7 +8,7 @@ const socials = [
   ['LinkedIn', LinkedinIcon],
 ];
 
-export default function Footer() {
+export default function Footer({ settings }) {
   return (
     <footer className="bg-forest-950 text-white">
       <div className="container-shell grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
@@ -23,9 +23,9 @@ export default function Footer() {
         <div>
           <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-white">Contact</h3>
           <div className="mt-4 grid gap-3 text-sm text-white/70">
-            <a href="mailto:shukravedaherbals@gmail.com" className="flex items-center gap-3 hover:text-white"><MailIcon className="h-5 w-5 shrink-0 text-gold" />shukravedaherbals@gmail.com</a>
-            <a href="tel:+919319325065" className="flex items-center gap-3 hover:text-white"><PhoneIcon className="h-5 w-5 shrink-0 text-gold" />+91 93193 25065</a>
-            <span className="flex items-center gap-3"><MapPinIcon className="h-5 w-5 shrink-0 text-gold" />Demo Address, New Delhi, India</span>
+            <a href={`mailto:${settings.email}`} className="flex items-center gap-3 hover:text-white"><MailIcon className="h-5 w-5 shrink-0 text-gold" />{settings.email}</a>
+            <a href={`tel:${settings.phone.split(' ').join('')}`} className="flex items-center gap-3 hover:text-white"><PhoneIcon className="h-5 w-5 shrink-0 text-gold" />{settings.phone}</a>
+            <span className="flex items-center gap-3"><MapPinIcon className="h-5 w-5 shrink-0 text-gold" />{settings.address}</span>
           </div>
         </div>
         <div>

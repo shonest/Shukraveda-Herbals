@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-const initial = { name: '', email: '', mobile: '', disease: '', message: '' };
+const initial = { name: '', email: '', mobile: '', disease: '', message: '', website: '' };
 
 function validate(values) {
   const errors = {};
@@ -14,10 +14,12 @@ function validate(values) {
   return errors;
 }
 
-export default function ContactForm() {
+export default function ContactForm({ diseases = [] }) {
   const [values, setValues] = useState(initial);
   const [errors, setErrors] = useState({});
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [serverError, setServerError] = useState('');
 
   const update = e => {
     setValues(v => ({ ...v, [e.target.name]: e.target.value }));
@@ -25,13 +27,23 @@ export default function ContactForm() {
     setSent(false);
   };
 
-  const submit = e => {
+  const submit = async e => {
     e.preventDefault();
     const nextErrors = validate(values);
     setErrors(nextErrors);
-    if (Object.keys(nextErrors).length === 0) {
-      setSent(true);
-      setValues(initial);
+    if (Object.keys(nextErrors).length) return;
+    setSending(true);
+    setServerError('');
+    try {
+      const res = await fetch('/api/leads', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(values) });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok) { setSent(true); setValues(initial); }
+      else if (data.errors) setErrors(data.errors);
+      else setServerError(data.error || 'Something went wrong. Please try again.');
+    } catch {
+      setServerError('Network error. Please try again.');
+    } finally {
+      setSending(false);
     }
   };
 
@@ -55,10 +67,7 @@ export default function ContactForm() {
         <label className="text-sm font-semibold">Select Disease
           <select name="disease" value={values.disease} onChange={update} className={field}>
             <option value="">Choose a concern</option>
-            <option>Kidney Disorder</option>
-            <option>Skin Disorder</option>
-            <option>Sexual Disorder</option>
-            <option>Male Infertility</option>
+            {diseases.map(d => <option key={d}>{d}</option>)}
           </select>
           {errors.disease && <span className="mt-1 block text-xs text-red-600">{errors.disease}</span>}
         </label>
@@ -67,9 +76,10 @@ export default function ContactForm() {
         <textarea name="message" value={values.message} onChange={update} rows="5" className={field} placeholder="Tell us briefly what you would like help with" />
         {errors.message && <span className="mt-1 block text-xs text-red-600">{errors.message}</span>}
       </label>
-      <button className="focus-ring mt-6 w-full rounded-xl bg-forest-800 px-5 py-3.5 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-forest-700 hover:shadow-card" type="submit">Request a Consultation</button>
-      {sent && <p role="status" className="mt-4 rounded-xl bg-forest-50 px-4 py-3 text-sm text-forest-800">Thank you. Your form is validated and ready to connect to your email, CRM, or API endpoint.</p>}
-      <p className="mt-4 text-xs leading-5 text-slate-500">This demo form does not send data yet. Connect the submit handler to your preferred backend before production.</p>
+      <input name="website" value={values.website} onChange={update} tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
+      <button disabled={sending} className="focus-ring mt-6 disabled:opacity-60 w-full rounded-xl bg-forest-800 px-5 py-3.5 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-forest-700 hover:shadow-card" type="submit">{sending ? 'Sending…' : 'Request a Consultation'}</button>
+      {sent && <p role="status" className="mt-4 rounded-xl bg-forest-50 px-4 py-3 text-sm text-forest-800">Thank you. Your request has been received and our team will contact you shortly.</p>}
+      {serverError && <p role="alert" className="mt-4 rounded-xl bg-red-50 px-4 py-3 text-sm text-red-700">{serverError}</p>}
     </form>
   );
 }

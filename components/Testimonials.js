@@ -4,12 +4,6 @@ import { useEffect, useState } from 'react';
 import Reveal from './Reveal';
 import { LeafLogo, ChevronRight } from './Icons';
 
-// Sample content – replace with real, consented patient testimonials before launch.
-const testimonials = [
-  { name: 'Happy Patient', concern: 'Kidney wellness', text: ['I found Shukravedaherbals online and spoke with their team. The guidance was clear and respectful from the very first call.', 'After following the plan for a few weeks, I feel more energetic and I am very satisfied with the care I received.'] },
-  { name: 'Happy Patient', concern: 'Skin care', text: ['The consultation was private and unhurried. My health coach checked in regularly and explained each part of the routine.', 'It made the whole plan easy to follow.'] },
-  { name: 'Happy Patient', concern: 'Male wellness', text: ['I was hesitant to talk about my concern, but the team made me comfortable from the first call.', 'I appreciated the confidentiality and the personal attention.'] },
-];
 
 
 const UserIcon = ({ className }) => (
@@ -20,7 +14,8 @@ const QuoteMark = ({ className = '' }) => (
   <svg className={className} viewBox="0 0 48 40" fill="currentColor" aria-hidden="true"><path d="M0 40V24C0 10 8 2 22 0v8C14 10 11 14 11 20h11v20H0Zm26 0V24C26 10 34 2 48 0v8c-8 2-11 6-11 12h11v20H26Z" /></svg>
 );
 
-export default function Testimonials() {
+export default function Testimonials({ items }) {
+  const testimonials = items.map(t => ({ ...t, text: t.text.split(/\n\s*\n/).filter(Boolean) }));
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const count = testimonials.length;
@@ -31,6 +26,8 @@ export default function Testimonials() {
     const id = setInterval(() => setIndex(i => (i + 1) % count), 7000);
     return () => clearInterval(id);
   }, [paused, count]);
+
+  if (!count) return null;
 
   return (
     <section id="testimonials" className="section-pad relative isolate overflow-hidden bg-gradient-to-br from-cream via-white to-forest-50">
