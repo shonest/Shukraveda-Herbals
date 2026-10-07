@@ -6,9 +6,9 @@ import { MenuIcon } from './Icons';
 
 const diseases = [
   ['Kidney Disorder', '/kidney-disorder'],
-  ['Skin Disorder', '/#skin-disorder'],
-  ['Sexual Disorder', '/#sexual-disorder'],
-  ['Male Infertility', '/#male-infertility'],
+  ['Skin Disorder', '/skin-disorder'],
+  ['Sexual Disorder', '/sexual-disorder'],
+  ['Male Infertility', '/male-infertility'],
 ];
 
 const links = [
