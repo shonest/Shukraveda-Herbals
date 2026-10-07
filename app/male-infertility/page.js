@@ -134,7 +134,7 @@ export default async function MaleInfertilityPage() {
                 <p>At Shukraveda Herbals we focus on supporting natural balance and overall reproductive health. Our guidance combines herbal support, dietary and lifestyle changes and stress management, tailored to your history and routine.</p>
                 <p>We place emphasis on a nutritious diet, regular physical activity and good sleep, and we follow up so that your plan can change as you progress. Our guidance works alongside, not instead of, proper medical evaluation.</p>
               </div>
-              <Link href="/#contact" className="focus-ring mt-6 inline-flex rounded-xl bg-forest-600 px-6 py-3 font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-forest-700">Book Consultation</Link>
+              <Link href="/contact" className="focus-ring mt-6 inline-flex rounded-xl bg-forest-600 px-6 py-3 font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-forest-700">Book Consultation</Link>
             </Reveal>
           </div>
         </section>

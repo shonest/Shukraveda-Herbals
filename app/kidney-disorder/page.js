@@ -111,7 +111,7 @@ export default async function KidneyDisorderPage() {
                 <p className="text-xs font-bold uppercase tracking-[.24em] text-gold">Don’t wait</p>
                 <h3 className="mt-3 text-2xl font-semibold">Early attention makes a difference</h3>
                 <p className="mt-4 text-sm leading-6 text-white/80">If you notice any of these signs, get your kidney function tests done and talk to us about supportive guidance that suits your condition.</p>
-                <Link href="/#contact" className="focus-ring mt-6 inline-flex rounded-xl bg-gold px-5 py-3 text-sm font-bold text-forest-950 transition hover:bg-white">Talk to our team</Link>
+                <Link href="/contact" className="focus-ring mt-6 inline-flex rounded-xl bg-gold px-5 py-3 text-sm font-bold text-forest-950 transition hover:bg-white">Talk to our team</Link>
               </div>
             </Reveal>
           </div>

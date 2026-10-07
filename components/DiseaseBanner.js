@@ -13,7 +13,7 @@ export default function DiseaseBanner({ title, text, image, alt, secondary }) {
           <h1 className="motion-reduce:animate-none animate-slide-in-left text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">{title}</h1>
           <p style={{ animationDelay: '.2s' }} className="motion-reduce:animate-none animate-fade-up mt-5 max-w-2xl text-base leading-7 text-white/85 sm:text-lg">{text}</p>
           <div style={{ animationDelay: '.4s' }} className="motion-reduce:animate-none animate-fade-up mt-10 flex flex-nowrap gap-3 sm:gap-4">
-            <Link href="/#contact" className="focus-ring flex-1 whitespace-nowrap rounded-xl bg-gold px-3 py-3 text-center text-sm font-bold text-forest-950 shadow-card transition hover:-translate-y-0.5 hover:bg-white sm:flex-none sm:px-6 sm:text-base">Book Consultation</Link>
+            <Link href="/contact" className="focus-ring flex-1 whitespace-nowrap rounded-xl bg-gold px-3 py-3 text-center text-sm font-bold text-forest-950 shadow-card transition hover:-translate-y-0.5 hover:bg-white sm:flex-none sm:px-6 sm:text-base">Book Consultation</Link>
             <Link href={secondary[1]} className="focus-ring flex-1 whitespace-nowrap rounded-xl border border-white/40 px-3 py-3 text-center text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/10 sm:flex-none sm:px-6 sm:text-base">{secondary[0]}</Link>
           </div>
         </div>

@@ -13,10 +13,10 @@ const diseases = [
 
 const links = [
   ['Home', '/#home'],
-  ['About Us', '/#about'],
+  ['About Us', '/about'],
   ['Diseases', '/#diseases', diseases],
   ['Our Patients', '/#testimonials'],
-  ['Contact Us', '/#contact'],
+  ['Contact Us', '/contact'],
 ];
 
 const Chevron = ({ className = '' }) => (
@@ -97,7 +97,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        <Link href="/#contact" className="focus-ring hidden rounded-xl bg-forest-600 px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-forest-700 hover:shadow-card lg:inline-flex">Book Consultation</Link>
+        <Link href="/contact" className="focus-ring hidden rounded-xl bg-forest-600 px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-forest-700 hover:shadow-card lg:inline-flex">Book Consultation</Link>
         <button onClick={() => setMenuOpen(v => !v)} className="focus-ring rounded-lg border border-forest-200 p-2 text-forest-800 xl:hidden" aria-expanded={menuOpen} aria-label="Toggle navigation">
           <MenuIcon open={menuOpen} />
         </button>

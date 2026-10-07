@@ -166,7 +166,7 @@ export default async function SexualDisorderPage() {
               <CenterHeading>Take the First Step Towards Wellness</CenterHeading>
               <p className="mt-8 text-base leading-7 text-slate-600">If you are struggling with erectile dysfunction, premature ejaculation or low libido, don’t let these challenges hold you back any longer. Our natural approach is a safe, gentle and holistic way to reclaim your sexual health.</p>
               <p className="mt-3 text-base leading-7 text-slate-600">Contact us today to schedule a consultation and begin your journey to a more fulfilling and intimate life.</p>
-              <Link href="/#contact" className="focus-ring mt-6 inline-flex rounded-xl bg-forest-600 px-6 py-3 font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-forest-700">Book Consultation</Link>
+              <Link href="/contact" className="focus-ring mt-6 inline-flex rounded-xl bg-forest-600 px-6 py-3 font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-forest-700">Book Consultation</Link>
             </Reveal>
           </div>
         </section>

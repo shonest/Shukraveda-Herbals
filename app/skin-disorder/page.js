@@ -137,7 +137,7 @@ export default async function SkinDisorderPage() {
                 <p>At Shukraveda Herbals we believe skin health reflects overall balance. Our approach is rooted in Ayurvedic thinking, looking at your constitution, diet, stress and daily habits instead of treating the surface alone.</p>
                 <p>We combine herbal guidance with simple dietary and lifestyle suggestions that fit your routine, and we follow up so that your plan can be adjusted as you progress. Our guidance supports, and does not replace, the care of your dermatologist.</p>
               </div>
-              <Link href="/#contact" className="focus-ring mt-6 inline-flex rounded-xl bg-forest-600 px-6 py-3 font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-forest-700">Book Consultation</Link>
+              <Link href="/contact" className="focus-ring mt-6 inline-flex rounded-xl bg-forest-600 px-6 py-3 font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-forest-700">Book Consultation</Link>
             </Reveal>
           </div>
         </section>
