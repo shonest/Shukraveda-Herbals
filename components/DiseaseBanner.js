@@ -8,7 +8,7 @@ export default function DiseaseBanner({ title, text, image, alt, secondary }) {
       <div className="pointer-events-none absolute left-[8%] top-[15%] h-40 w-40 rounded-full bg-gold/15 blur-2xl animate-drift motion-reduce:animate-none" />
       <div className="pointer-events-none absolute right-[30%] bottom-[10%] h-56 w-56 rounded-full bg-forest-300/20 blur-3xl animate-drift-rev motion-reduce:animate-none" />
       <div className="pointer-events-none absolute -bottom-32 left-1/3 h-80 w-80 rounded-full bg-white/5 animate-soft-float motion-reduce:animate-none" />
-      <div className="container-shell relative grid items-center gap-6 py-14 md:py-20 md:min-h-[28rem] lg:h-[30rem] lg:min-h-0 lg:grid-cols-[1.2fr_.8fr]">
+      <div className="container-shell relative grid items-center gap-6 py-12 md:py-14 md:min-h-[26.5rem] lg:h-[28rem] lg:py-12 lg:min-h-0 lg:grid-cols-[1.2fr_.8fr]">
         <div>
           <h1 className="motion-reduce:animate-none animate-slide-in-left text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">{title}</h1>
           <p style={{ animationDelay: '.2s' }} className="motion-reduce:animate-none animate-fade-up mt-5 max-w-2xl text-base leading-7 text-white/85 sm:text-lg">{text}</p>
@@ -17,7 +17,7 @@ export default function DiseaseBanner({ title, text, image, alt, secondary }) {
             <Link href={secondary[1]} className="focus-ring flex-1 whitespace-nowrap rounded-xl border border-white/40 px-3 py-3 text-center text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/10 sm:flex-none sm:px-6 sm:text-base">{secondary[0]}</Link>
           </div>
         </div>
-        <div className="relative mx-auto h-64 w-64 sm:h-80 sm:w-80 lg:-my-14 lg:h-[26rem] lg:w-[26rem]">
+        <div className="relative mx-auto h-[calc(16rem-40px)] w-[calc(16rem-40px)] sm:h-[calc(20rem-40px)] sm:w-[calc(20rem-40px)] lg:-my-14 lg:h-[calc(26rem-40px)] lg:w-[calc(26rem-40px)]">
           <div className="absolute inset-0 rounded-full bg-white/10 blur-sm" />
           <div className="absolute inset-0 animate-ping rounded-full border border-white/30 [animation-duration:3.5s] motion-reduce:animate-none" aria-hidden="true" />
           <div className="absolute inset-0 animate-ping rounded-full border border-gold/40 [animation-delay:1.7s] [animation-duration:3.5s] motion-reduce:animate-none" aria-hidden="true" />
