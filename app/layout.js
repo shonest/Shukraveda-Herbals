@@ -3,13 +3,13 @@ import './globals.css';
 export const metadata = {
   metadataBase: new URL('https://www.shukravedaherbals.com'),
   title: {
-    default: 'Shukravedaherbals | Ayurvedic Wellness & Herbal Care',
-    template: '%s | Shukravedaherbals'
+    default: 'Shukraveda Herbals | Ayurvedic Wellness & Herbal Care',
+    template: '%s | Shukraveda Herbals'
   },
   description:
-    'Explore Ayurveda-inspired wellness support for kidney health, skin concerns, sexual wellness and male infertility with Shukravedaherbals.',
+    'Explore Ayurveda-inspired wellness support for kidney health, skin concerns, sexual wellness and male infertility with Shukraveda Herbals.',
   keywords: [
-    'Shukravedaherbals',
+    'Shukraveda Herbals',
     'Ayurvedic wellness',
     'herbal care',
     'kidney disorder ayurveda',
@@ -19,11 +19,11 @@ export const metadata = {
   ],
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Shukravedaherbals | Ayurvedic Wellness & Herbal Care',
+    title: 'Shukraveda Herbals | Ayurvedic Wellness & Herbal Care',
     description:
       'A clean, natural wellness destination focused on personalized Ayurveda-inspired guidance.',
     url: 'https://www.shukravedaherbals.com',
-    siteName: 'Shukravedaherbals',
+    siteName: 'Shukraveda Herbals',
     type: 'website'
   },
   robots: { index: true, follow: true }
@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Shukravedaherbals',
+    name: 'Shukraveda Herbals',
     url: 'https://www.shukravedaherbals.com',
     email: 'shukravedaherbals@gmail.com',
     telephone: '+91-9319325065',

@@ -33,8 +33,8 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <section id="home" className="relative mt-[calc(var(--header-h)+var(--strip-h))] overflow-hidden bg-forest-950" aria-label="Shukravedaherbals wellness highlights">
-      <h1 className="sr-only">Shukravedaherbals Ayurvedic Wellness and Herbal Care</h1>
+    <section id="home" className="relative mt-[calc(var(--header-h)+var(--strip-h))] overflow-hidden bg-forest-950" aria-label="Shukraveda Herbals wellness highlights">
+      <h1 className="sr-only">Shukraveda Herbals Ayurvedic Wellness and Herbal Care</h1>
       <div className="relative aspect-[4/5] w-full sm:aspect-[1920/700] sm:min-h-[360px] lg:min-h-0 lg:max-h-[78vh]">
         {slides.map((slide, i) => (
           <div key={slide.image} className={`absolute inset-0 transition-all duration-700 ease-out ${i === index ? 'scale-100 opacity-100' : 'scale-[1.015] opacity-0'}`} aria-hidden={i !== index}>

@@ -13,7 +13,7 @@ export default function Footer({ settings }) {
     <footer className="bg-forest-950 text-white">
       <div className="container-shell grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="inline-block rounded-2xl bg-white p-2"><Image src="/images/logo.png" alt="Shukravedaherbals" width={139} height={127} unoptimized className="h-32 w-auto" /></div>
+          <div className="inline-block rounded-2xl bg-white p-2"><Image src="/images/logo.png" alt="Shukraveda Herbals" width={139} height={127} unoptimized className="h-32 w-auto" /></div>
           <p className="mt-4 max-w-xs text-sm leading-6 text-white/70">Ayurveda-inspired wellness support with a natural, respectful and personalized approach.</p>
         </div>
         <div>
@@ -40,7 +40,7 @@ export default function Footer({ settings }) {
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10 py-5 text-center text-xs text-white/55">© {new Date().getFullYear()} Shukravedaherbals. All rights reserved.</div>
+      <div className="border-t border-white/10 py-5 text-center text-xs text-white/55">© {new Date().getFullYear()} Shukraveda Herbals. All rights reserved.</div>
     </footer>
   );
 }

@@ -21,7 +21,7 @@ export default async function HomePage() {
 
         <section id="diseases" className="section-pad bg-cream">
           <div className="container-shell">
-            <Reveal><SectionHeading center eyebrow="Holistic wellness support" title="Conditions We" highlight="Focus On" text="Shukravedaherbals focuses on four core wellness areas with a clean, personalized and privacy-conscious consultation experience." /></Reveal>
+            <Reveal><SectionHeading center eyebrow="Holistic wellness support" title="Conditions We" highlight="Focus On" text="Shukraveda Herbals focuses on four core wellness areas with a clean, personalized and privacy-conscious consultation experience." /></Reveal>
             <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:gap-6 xl:grid-cols-4">
               {diseases.map((d, i) => <Reveal key={d.id} className="h-full"><DiseaseCard {...d} /></Reveal>)}
             </div>
@@ -31,7 +31,7 @@ export default async function HomePage() {
         <section id="about" className="section-pad bg-white">
           <div className="container-shell grid items-center gap-10 lg:grid-cols-[1.05fr_.95fr]">
             <Reveal>
-              <SectionHeading eyebrow="Why Shukravedaherbals" title="Natural care designed around the" highlight="individual" text="Our website experience is built to make wellness information easy to understand and consultation access straightforward. The focus stays on clear guidance, thoughtful care and a calm, trustworthy presentation." />
+              <SectionHeading eyebrow="Why Shukraveda Herbals" title="Care That Matters to" highlight="Every Individual" text={<><strong className="font-semibold text-forest-800">Wellness made simple, guidance made personal.</strong><br />Clear information, thoughtful care, and easy access to the support you need—so you can take the next step with confidence.</>} />
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {[
                   ['Personalized Approach','Guidance tailored to individual wellness goals.'],

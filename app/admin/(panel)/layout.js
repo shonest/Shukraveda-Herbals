@@ -10,7 +10,7 @@ export default async function PanelLayout({ children }) {
   return (
     <div className="min-h-screen bg-slate-50 text-ink md:flex">
       <aside className="border-b border-forest-100 bg-forest-900 p-4 text-white md:sticky md:top-0 md:h-screen md:w-60 md:shrink-0 md:border-b-0">
-        <Link href="/admin" className="block font-serif text-lg font-semibold">Shukravedaherbals</Link>
+        <Link href="/admin" className="block font-serif text-lg font-semibold">Shukraveda Herbals</Link>
         <p className="text-xs text-white/60">Admin panel</p>
         <AdminNav />
         <div className="mt-4 border-t border-white/10 pt-4 text-xs md:absolute md:inset-x-4 md:bottom-4 md:mt-0">

@@ -66,7 +66,7 @@ export default function Header() {
         <span className="truncate">🌿 शुद्ध आयुर्वेदिक उपचार • प्रमाणित वैद्यों से निःशुल्क परामर्श 🌿</span>
       </div>
       <div className="container-shell flex h-[var(--header-h)] items-center justify-between gap-6">
-        <a href="#home" className="focus-ring flex items-center gap-2 rounded-lg text-forest-800" aria-label="Shukravedaherbals home">
+        <a href="#home" className="focus-ring flex items-center gap-2 rounded-lg text-forest-800" aria-label="Shukraveda Herbals home">
           <div className="leading-none tracking-tight">
             <span className="text-xl font-light sm:text-2xl">Shukraveda</span><span className="text-xl font-bold sm:text-2xl">Herbals</span>
             <span className="mt-1 block text-[10px] uppercase tracking-[.22em] text-forest-600">Natural wellness</span>

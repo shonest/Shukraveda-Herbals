@@ -15,7 +15,7 @@ export default function ProcessSteps() {
     <section id="process" className="section-pad relative overflow-hidden bg-cream">
 
       <div className="container-shell relative">
-        <Reveal><SectionHeading center eyebrow="A simple journey to better health" title="Steps to Get Your Personalised" highlight="Ayurvedic Treatment" text="Every person is unique, and at Shukravedaherbals, we embrace this individuality. We carefully assess both the patient and the condition to identify the root cause and deliver a truly personalized Ayurvedic treatment plan." /></Reveal>
+        <Reveal><SectionHeading center eyebrow="Nurture Your Body. Embrace a Healthier Life." title="Wellness That Begins With" highlight="Understanding You" text={<><strong className="font-semibold text-forest-800">Your body. Your needs. Your wellness journey.</strong><br />We believe effective wellness begins with understanding you. At Shukraveda Herbals, we consider your concerns, lifestyle, and overall wellbeing to provide personalized herbal guidance.</>} /></Reveal>
 
         <ol className="mt-14 grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map(([n, title, text, icon], i) => (

@@ -1,4 +1,4 @@
-# Shukravedaherbals website
+# Shukraveda Herbals website
 
 Next.js + Tailwind CSS single-page website based on the supplied wellness UI direction.
 
