@@ -20,8 +20,8 @@ export default function DiseaseCard({ id, type, title, text }) {
         </div>
         <h3 className="text-2xl font-semibold text-ink">{title}</h3>
         <p className="mt-3 text-sm leading-6 text-slate-600">{text}</p>
-        <a href="#contact" className="focus-ring mt-5 inline-flex items-center gap-1 rounded-md text-sm font-bold text-forest-700 transition-all group-hover:gap-3 group-hover:text-forest-900">
-          Talk to us <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+        <a href={type === "kidney" ? "/kidney-disorder" : "#contact"} className="focus-ring mt-5 inline-flex items-center gap-1 rounded-md text-sm font-bold text-forest-700 transition-all group-hover:gap-3 group-hover:text-forest-900">
+          {type === "kidney" ? "Learn more" : "Talk to us"} <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </a>
       </div>
     </article>

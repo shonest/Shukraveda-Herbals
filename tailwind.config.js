@@ -42,6 +42,10 @@ module.exports = {
           '0%': { opacity: '0', transform: 'translateX(-60px)' },
           '100%': { opacity: '1', transform: 'translateX(0)' }
         },
+        gradientShift: { '0%, 100%': { backgroundPosition: '0% 50%' }, '50%': { backgroundPosition: '100% 50%' } },
+        spinSlow: { to: { transform: 'rotate(360deg)' } },
+        drift: { '0%, 100%': { transform: 'translate(0,0)' }, '50%': { transform: 'translate(40px,30px)' } },
+        driftRev: { '0%, 100%': { transform: 'translate(0,0)' }, '50%': { transform: 'translate(-50px,-25px)' } },
         softFloat: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-5px)' }
@@ -51,7 +55,11 @@ module.exports = {
         'fade-up': 'fadeUp .7s ease-out both',
         'icon-float': 'iconFloat 1.6s ease-in-out infinite',
         'slide-in-left': 'slideInLeft .6s ease-out both',
-        'soft-float': 'softFloat 4s ease-in-out infinite'
+        'soft-float': 'softFloat 4s ease-in-out infinite',
+        'gradient-shift': 'gradientShift 12s ease-in-out infinite',
+        'spin-slow': 'spinSlow 40s linear infinite',
+        drift: 'drift 9s ease-in-out infinite',
+        'drift-rev': 'driftRev 11s ease-in-out infinite'
       }
     }
   },

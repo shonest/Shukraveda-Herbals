@@ -18,7 +18,7 @@ export default function Footer({ settings }) {
         </div>
         <div>
           <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-white">Quick Links</h3>
-          <div className="mt-4 grid gap-3 text-sm text-white/70"><a href="#about" className="hover:text-white">About Us</a><a href="#diseases" className="hover:text-white">Diseases</a><a href="#contact" className="hover:text-white">Contact Us</a></div>
+          <div className="mt-4 grid gap-3 text-sm text-white/70"><a href="/#about" className="hover:text-white">About Us</a><a href="/#diseases" className="hover:text-white">Diseases</a><a href="/#contact" className="hover:text-white">Contact Us</a></div>
         </div>
         <div>
           <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-white">Contact</h3>
